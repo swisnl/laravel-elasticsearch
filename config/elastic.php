@@ -23,17 +23,12 @@ return [
                         'type' => 'length',
                         'min' => 3,
                     ],
-                    'decompounder_nl' => [
-                        'type' => 'dictionary_decompounder',
-                        'word_list_path' => 'vendor/swisnl/laravel-elastic/config/analysis/nl_NL/wordList.txt',
-                    ],
                 ],
                 'analyzer' => [
                     'default' => [
                         'tokenizer' => 'standard',
                         'filter' => [
                             'lowercase',
-                            'decompounder_nl',
                             'length_nl',
                             'stop_nl',
                             'snow_nl',
@@ -43,7 +38,6 @@ return [
                         'tokenizer' => 'standard',
                         'filter' => [
                             'lowercase',
-                            'decompounder_nl',
                             'length_nl',
                             'stop_nl',
                             'snow_nl',
