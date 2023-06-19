@@ -12,7 +12,7 @@ This package will add an easy integration of elasticsearch into laravel. With th
 composer require swisnl/laravel-elastic
 ```
 ```bash
-php artisan laravel-elastic:install
+php artisan swis-elastic:install
 ```
 Now there will be an `elastic.php` available to configure your elastic instance in.
 

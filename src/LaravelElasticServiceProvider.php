@@ -14,7 +14,7 @@ class LaravelElasticServiceProvider extends PackageServiceProvider
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('laravel-elastic')
+            ->name('swis-elastic')
             ->hasConfigFile('elastic')
             ->hasCommands([
                 ElasticRefreshIndex::class,
