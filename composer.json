@@ -1,0 +1,40 @@
+{
+    "name": "swisnl/laravel-elastic",
+    "description": "Laravel wrapper for Mautic API",
+    "keywords": [
+        "swisnl",
+        "laravel",
+        "laravel-elastic",
+        "elasticsearch"
+    ],
+    "homepage": "https://github.com/swisnl/laravel-mautic",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "elasticsearch/elasticsearch": "^8.6.2",
+        "laravel/framework": "^9.52",
+        "spatie/laravel-package-tools": "^1.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "Swis\\Elastic\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thomas Wijnands",
+            "email": "twijnands@swis.nl",
+            "role": "developer"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Swis\\Elastic\\LaravelElasticServiceProvider"
+            ]
+        },
+        "files": [
+            "config/elastic.php"
+        ]
+    }
+}
