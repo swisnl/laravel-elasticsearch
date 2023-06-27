@@ -1,6 +1,6 @@
 {
     "name": "swisnl/laravel-elastic",
-    "description": "Laravel wrapper for Mautic API",
+    "description": "Laravel wrapper for elastic search",
     "keywords": [
         "swisnl",
         "laravel",
