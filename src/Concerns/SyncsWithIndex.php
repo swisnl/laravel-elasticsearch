@@ -2,6 +2,7 @@
 
 namespace Swis\Elastic\Concerns;
 
+use Swis\Elastic\Interfaces\DocumentInterface;
 use Swis\Elastic\Interfaces\IndexableInterface;
 use Swis\Elastic\Domain\Elastic\Document;
 use Swis\Elastic\Jobs\Elastic\DeleteDocument;
@@ -26,9 +27,9 @@ trait SyncsWithIndex
         });
     }
 
-    protected function getBaseDocument(): Document
+    protected function getBaseDocument(): DocumentInterface
     {
-        return (new Document())
+        return app(DocumentInterface::class)
             ->setId($this->getKey())
             ->setType($this->getMorphClass())
             ->setDate($this->{$this->getCreatedAtColumn()});

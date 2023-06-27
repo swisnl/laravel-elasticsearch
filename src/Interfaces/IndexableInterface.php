@@ -14,7 +14,7 @@ interface IndexableInterface
     /**
      * @return \Illuminate\Support\Collection<int,\Illuminate\Database\Eloquent\Model>
      */
-    public function modelsToIndex(): Collection;
+    public function relatedModelsToIndex(): Collection;
 
     public function index(): void;
 }

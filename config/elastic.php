@@ -7,7 +7,15 @@ return [
     'models' => [
         // define your model classes here that needs to be indexed
     ],
+    'search_fields' => [
+        // define the fields that needs to be searched with aditional boosting example: 'title^5'
+    ],
     'index_mapping' => [
-        // define your index mapping here
+        'mappings' => [
+            'properties' => [
+                'type' => ['type' => 'keyword'],
+                'date' => ['type' => 'date', 'format' => 'epoch_second'],
+            ],
+        ],
     ],
 ];

@@ -14,15 +14,19 @@ class ElasticDeleteIndex extends Command
 
     public function handle(Client $client): int
     {
+        $index = $this->option('index') ?? config('elastic.index');
+
         try {
             $client->indices()->delete([
-                'index' => $this->option('index') ?? config('elastic.index'),
+                'index' => $index,
             ]);
         } catch (ClientResponseException $e) {
             if ($e->getCode() !== 404) {
                 throw $e;
             }
         }
+
+        $this->info(sprintf('Index "%s" deleted', $index));
 
         return Command::SUCCESS;
     }

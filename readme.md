@@ -12,7 +12,7 @@ This package will add an easy integration of elasticsearch into laravel. With th
 composer require swisnl/laravel-elastic
 ```
 ```bash
-php artisan swis-elastic:install
+php artisan laravel-elastic:install
 ```
 Now there will be an `elastic.php` available to configure your elastic instance in.
 
@@ -29,7 +29,5 @@ php artisan elastic:refresh-index
 ```
 
 ## Usage
-Add the syncsWithIndex trait to any of you're models. Make sure to add the model in the models section of `config.php`
+Add the syncsWithIndex trait to any of your models. Make sure to add the model in the models section of `config.php`
 Implement the `IndexableInterface` to your model and implement the method stubs. Now on the giving condition laravel will keep your model in sync with the index in elasticsearch
-
-

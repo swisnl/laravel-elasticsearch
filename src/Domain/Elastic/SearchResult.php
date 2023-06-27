@@ -2,11 +2,12 @@
 
 namespace Swis\Elastic\Domain\Elastic;
 
-use Carbon\Carbon;
 use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Support\Carbon;
+use Swis\Elastic\Interfaces\SearchResultInterface;
 
 /** @phpstan-ignore-next-line */
-class SearchResult implements Arrayable
+class SearchResult implements Arrayable, SearchResultInterface
 {
     protected string $id;
     protected string $type;

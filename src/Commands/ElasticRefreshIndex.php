@@ -20,10 +20,12 @@ class ElasticRefreshIndex extends Command
         /** @var class-string<\Illuminate\Database\Eloquent\Model>[] $models */
         $models = config('elastic.models');
 
-        collect($models)
+        $models = collect($models)
             ->filter(fn (string $model) => is_a($model, IndexableInterface::class, true))
             ->flatMap(fn (string $model): Collection => $model::all())
             ->each(fn (IndexableInterface $model) => $model->index());
+
+        $this->info(sprintf('Dispatched %d index jobs', $models->count()));
 
         return Command::SUCCESS;
     }
