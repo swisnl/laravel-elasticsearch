@@ -1,46 +1,52 @@
 {
     "name": "swisnl/laravel-elastic",
-    "description": "Laravel wrapper for elastic search",
+    "type": "library",
+    "description": "Laravel integration for elastic search",
     "keywords": [
         "swisnl",
-        "laravel",
-        "laravel-elastic",
-        "elasticsearch"
+        "laravel-elastic"
     ],
     "homepage": "https://github.com/swisnl/laravel-elastic",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Wijnands",
+            "email": "twijnands@swis.nl",
+            "homepage": "https://www.swis.nl",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": "^8.1",
         "elasticsearch/elasticsearch": "^8.6.2",
         "laravel/framework": "^9.52|^10.0",
-        "spatie/laravel-package-tools": "^1.15",
-        "laravel-json-api/laravel": "^2.6"
+        "spatie/laravel-package-tools": "^1.15"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.8",
+        "phpunit/phpunit" : "^9.5"
     },
     "autoload": {
         "psr-4": {
             "Swis\\Elastic\\": "src"
         }
     },
-    "authors": [
-        {
-            "name": "Thomas Wijnands",
-            "email": "twijnands@swis.nl",
-            "role": "developer"
+    "autoload-dev": {
+        "psr-4": {
+            "Swis\\Elastic\\Tests\\": "tests"
         }
-    ],
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "php-cs-fixer fix --dry-run -v",
+        "fix-style": "php-cs-fixer fix"
+    },
     "extra": {
-        "laravel": {
-            "providers": [
-                "Swis\\Elastic\\LaravelElasticServiceProvider"
-            ]
-        },
-        "files": [
-            "config/elastic.php"
-        ]
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
     },
     "config": {
-        "allow-plugins": {
-            "php-http/discovery": false
-        }
+        "sort-packages": true
     }
 }
