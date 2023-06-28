@@ -26,12 +26,6 @@ $ php artisan swis:elastic:install
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Testing
-
-``` bash
-$ composer test
-```
-
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) for details.
