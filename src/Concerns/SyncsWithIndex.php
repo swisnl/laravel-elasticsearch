@@ -1,14 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Swis\Elastic\Concerns;
 
-use Swis\Elastic\Interfaces\DocumentInterface;
-use Swis\Elastic\Interfaces\IndexableInterface;
-use Swis\Elastic\Domain\Elastic\Document;
-use Swis\Elastic\Jobs\Elastic\DeleteDocument;
-use Swis\Elastic\Jobs\Elastic\IndexDocument;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
+use Swis\Elastic\Interfaces\DocumentInterface;
+use Swis\Elastic\Interfaces\IndexableInterface;
+use Swis\Elastic\Jobs\Elastic\DeleteDocument;
+use Swis\Elastic\Jobs\Elastic\IndexDocument;
 
 trait SyncsWithIndex
 {

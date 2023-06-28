@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Swis\Elastic\Commands;
 
-use Swis\Elastic\Interfaces\IndexableInterface;
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
+use Swis\Elastic\Interfaces\IndexableInterface;
 
 class ElasticRefreshIndex extends Command
 {

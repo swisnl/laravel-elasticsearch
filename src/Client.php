@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Swis\Elastic;
 
 use Elastic\Elasticsearch\Client as ElasticSearchClient;
@@ -14,22 +16,34 @@ class Client
     {
     }
 
-    public function search($query): Elasticsearch
+    /**
+     * @param array<string,mixed> $query
+     */
+    public function search(array $query): Elasticsearch
     {
         return $this->elasticSearchClient->search($query);
     }
 
+    /**
+     * @param Elasticsearch $searchResultsResponse
+     *
+     * @return Collection<array-key, SearchResult|SearchResultInterface>
+     */
     public function createCollectionResponse(Elasticsearch $searchResultsResponse): Collection
     {
         $searchResults = $searchResultsResponse->asArray();
 
-        /** @var array<string,mixed> $hits */
-        $hits = $searchResults['hits']['hits'];
+        $hits = new Collection($searchResults['hits']['hits']);
 
-        if(!app()->bound(SearchResultInterface::class)){
-            return collect($hits)->map(static fn (array $document) => SearchResult::fromElasticSearchResult($document));
+        if (!app()->bound(SearchResultInterface::class)) {
+            /* @phpstan-ignore-next-line */
+            return $hits->map(
+                static fn (array $document): SearchResult => SearchResult::fromElasticSearchResult($document)
+            );
         }
 
-        return collect($hits)->map(static fn (array $document) => app(SearchResultInterface::class)::fromElasticSearchResult($document));
+        return $hits->map(
+            static fn (array $document): SearchResultInterface => app(SearchResultInterface::class)::fromElasticSearchResult($document)
+        );
     }
 }

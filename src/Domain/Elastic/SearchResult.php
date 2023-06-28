@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Swis\Elastic\Domain\Elastic;
 
 use Illuminate\Contracts\Support\Arrayable;
@@ -60,6 +62,9 @@ class SearchResult implements Arrayable, SearchResultInterface
             ->setDate(Carbon::parse($values['_source']['date']));
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function toArray(): array
     {
         return [

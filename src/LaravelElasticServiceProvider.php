@@ -1,12 +1,15 @@
 <?php
+
+declare(strict_types=1);
+
 namespace Swis\Elastic;
 
+use Spatie\LaravelPackageTools\Commands\InstallCommand;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Swis\Elastic\Commands\ElasticCreateIndex;
 use Swis\Elastic\Commands\ElasticDeleteIndex;
 use Swis\Elastic\Commands\ElasticRefreshIndex;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Swis\Elastic\Providers\ElasticServiceProvider;
 
 class LaravelElasticServiceProvider extends PackageServiceProvider
@@ -21,7 +24,7 @@ class LaravelElasticServiceProvider extends PackageServiceProvider
                 ElasticCreateIndex::class,
                 ElasticDeleteIndex::class,
             ])
-            ->hasInstallCommand(function(InstallCommand $command) {
+            ->hasInstallCommand(function (InstallCommand $command) {
                 $command
                     ->publishConfigFile()
                     ->copyAndRegisterServiceProviderInApp()
@@ -29,7 +32,7 @@ class LaravelElasticServiceProvider extends PackageServiceProvider
             });
     }
 
-    public function bootingPackage()
+    public function bootingPackage(): void
     {
         $this->app->register(ElasticServiceProvider::class);
     }

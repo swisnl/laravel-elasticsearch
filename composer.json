@@ -24,20 +24,19 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.8",
-        "phpunit/phpunit" : "^9.5"
+        "orchestra/testbench": "^7.0",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.3",
+        "nunomaduro/larastan": "^2.0.1"
     },
     "autoload": {
         "psr-4": {
             "Swis\\Elastic\\": "src"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Swis\\Elastic\\Tests\\": "tests"
-        }
-    },
     "scripts": {
-        "test": "phpunit",
+        "analyse": "vendor/bin/phpstan analyse",
         "check-style": "php-cs-fixer fix --dry-run -v",
         "fix-style": "php-cs-fixer fix"
     },
@@ -47,6 +46,12 @@
         }
     },
     "config": {
-        "sort-packages": true
-    }
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Swis\Elastic\Commands;
 
 use Elastic\Elasticsearch\Client;

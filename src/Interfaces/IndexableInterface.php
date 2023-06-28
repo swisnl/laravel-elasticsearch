@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Swis\Elastic\Interfaces;
 
-use Swis\Elastic\Domain\Elastic\Document;
 use Illuminate\Support\Collection;
+use Swis\Elastic\Domain\Elastic\Document;
 
 interface IndexableInterface
 {

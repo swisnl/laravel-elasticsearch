@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Swis\Elastic\Domain\Elastic;
 
 use Illuminate\Support\Carbon;
@@ -24,7 +26,6 @@ class Document implements DocumentInterface
 
         return $this;
     }
-
 
     public function setDate(Carbon $date): self
     {

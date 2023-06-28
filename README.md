@@ -4,8 +4,6 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Buy us a tree][ico-treeware]][link-treeware]
 [![Build Status][ico-github-actions]][link-github-actions]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Made by SWIS][ico-swis]][link-swis]
 
@@ -61,15 +59,11 @@ This package is [Treeware](https://treeware.earth). If you use it in production,
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-treeware]: https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen.svg?style=flat-square
 [ico-github-actions]: https://img.shields.io/github/actions/workflow/status/swisnl/laravel-elastic/tests.yml?label=tests&branch=master&style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/swisnl/laravel-elastic.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/swisnl/laravel-elastic.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/swisnl/laravel-elastic.svg?style=flat-square
 [ico-swis]: https://img.shields.io/badge/%F0%9F%9A%80-made%20by%20SWIS-%230737A9.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/swisnl/laravel-elastic
 [link-github-actions]: https://github.com/swisnl/laravel-elastic/actions/workflows/tests.yml
-[link-scrutinizer]: https://scrutinizer-ci.com/g/swisnl/laravel-elastic/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/swisnl/laravel-elastic
 [link-downloads]: https://packagist.org/packages/swisnl/laravel-elastic
 [link-treeware]: https://plant.treeware.earth/swisnl/laravel-elastic
 [link-author]: https://github.com/tommie1001
