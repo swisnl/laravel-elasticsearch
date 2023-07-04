@@ -1,10 +1,10 @@
 {
-    "name": "swisnl/laravel-elastic",
+    "name": "swisnl/laravel-elasticsearch",
     "type": "library",
     "description": "Laravel integration for elasticsearch",
     "keywords": [
         "swisnl",
-        "laravel-elastic"
+        "laravel-elasticsearch"
     ],
     "homepage": "https://github.com/swisnl/laravel-elastic",
     "license": "MIT",
