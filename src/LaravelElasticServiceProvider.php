@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\Elastic;
+namespace Swis\Laravel\ElasticSearch;
 
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Swis\Laravel\Elastic\Commands\ElasticCreateIndex;
-use Swis\Laravel\Elastic\Commands\ElasticDeleteIndex;
-use Swis\Laravel\Elastic\Commands\ElasticRefreshIndex;
-use Swis\Laravel\Elastic\Providers\ElasticServiceProvider;
+use Swis\Laravel\ElasticSearch\Commands\ElasticCreateIndex;
+use Swis\Laravel\ElasticSearch\Commands\ElasticDeleteIndex;
+use Swis\Laravel\ElasticSearch\Commands\ElasticRefreshIndex;
+use Swis\Laravel\ElasticSearch\Providers\ElasticServiceProvider;
 
 class LaravelElasticServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('swis-elastic')
-            ->hasConfigFile('elastic')
+            ->name('swis-laravel-elasticsearch')
+            ->hasConfigFile('elasticsearch')
             ->hasCommands([
                 ElasticRefreshIndex::class,
                 ElasticCreateIndex::class,
@@ -27,8 +27,7 @@ class LaravelElasticServiceProvider extends PackageServiceProvider
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
                     ->publishConfigFile()
-                    ->copyAndRegisterServiceProviderInApp()
-                    ->askToStarRepoOnGitHub('swisnl/laravel-elastic');
+                    ->askToStarRepoOnGitHub('swisnl/laravel-elasticsearch');
             });
     }
 

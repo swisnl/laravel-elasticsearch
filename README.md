@@ -17,10 +17,8 @@ Laravel package that implements elasticsearch in an easy way. Index various mode
 Via Composer
 
 ``` bash
-$ composer require swisnl/laravel-elastic
-$ php artisan swis:elastic:install
+$ composer require swisnl/laravel-elasticsearch
 ```
-
 
 ## Change log
 

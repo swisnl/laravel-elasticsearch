@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\Elastic\Commands;
+namespace Swis\Laravel\ElasticSearch\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
-use Swis\Laravel\Elastic\Interfaces\IndexableInterface;
+use Swis\Laravel\ElasticSearch\Interfaces\IndexableInterface;
 
 class ElasticRefreshIndex extends Command
 {

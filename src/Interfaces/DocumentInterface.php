@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\Elastic\Interfaces;
+namespace Swis\Laravel\ElasticSearch\Interfaces;
 
 use Illuminate\Support\Carbon;
 

@@ -1,7 +1,7 @@
 {
     "name": "swisnl/laravel-elastic",
     "type": "library",
-    "description": "Laravel integration for elastic search",
+    "description": "Laravel integration for elasticsearch",
     "keywords": [
         "swisnl",
         "laravel-elastic"
@@ -32,10 +32,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Swis\\Laravel\\Elastic\\": "src"
+            "Swis\\Laravel\\ElasticSearch\\": "src"
         }
     },
     "scripts": {
+        "test": "phpunit",
         "analyse": "vendor/bin/phpstan analyse",
         "check-style": "php-cs-fixer fix --dry-run -v",
         "fix-style": "php-cs-fixer fix"
@@ -46,10 +47,10 @@
         },
         "laravel": {
             "providers": [
-                "Swis\\Laravel\\Elastic\\LaravelElasticServiceProvider"
+                "Swis\\Laravel\\ElasticSearch\\LaravelElasticServiceProvider"
             ],
             "aliases": {
-                "SwisElastic": "Swis\\Laravel\\Elastic\\Facades\\Elastic"
+                "SwisElastic": "Swis\\Laravel\\ElasticSearch\\Facades\\Elastic"
             }
         }
     },

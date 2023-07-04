@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\Elastic\Domain\Elastic;
+namespace Swis\Laravel\ElasticSearch;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Carbon;
-use Swis\Laravel\Elastic\Interfaces\SearchResultInterface;
+use Swis\Laravel\ElasticSearch\Interfaces\SearchResultInterface;
 
 /** @phpstan-ignore-next-line */
 class SearchResult implements Arrayable, SearchResultInterface

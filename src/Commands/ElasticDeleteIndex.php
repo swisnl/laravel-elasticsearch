@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\Elastic\Commands;
+namespace Swis\Laravel\ElasticSearch\Commands;
 
 use Elastic\Elasticsearch\Client;
 use Elastic\Elasticsearch\Exception\ClientResponseException;

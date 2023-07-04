@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\Elastic\Commands;
+namespace Swis\Laravel\ElasticSearch\Commands;
 
 use Elastic\Elasticsearch\Client;
 use Illuminate\Console\Command;
-use Swis\Laravel\Elastic\Interfaces\IndexMappingBuilderInterface;
+use Swis\Laravel\ElasticSearch\Interfaces\IndexMappingBuilderInterface;
 
 class ElasticCreateIndex extends Command
 {
@@ -29,6 +29,8 @@ class ElasticCreateIndex extends Command
             'index' => $index,
             'body' => $this->getConfigBuilderClass(),
         ]);
+
+        $this->info(sprintf('Index "%s" created', $index));
 
         return Command::SUCCESS;
     }
