@@ -49,7 +49,7 @@
                 "Swis\\Laravel\\Elasticsearch\\LaravelElasticServiceProvider"
             ],
             "aliases": {
-                "SwisElastic": "Swis\\Laravel\\Elasticsearch\\Facades\\Elastic"
+                "SwisElastic": "Swis\\Laravel\\Elasticsearch\\Facades\\Elasticsearch"
             }
         }
     },
