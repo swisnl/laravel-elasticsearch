@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Swis\Elastic\Interfaces;
+namespace Swis\Laravel\Elastic\Interfaces;
 
 interface IndexMappingBuilderInterface
 {

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Swis\Elastic\Commands;
+namespace Swis\Laravel\Elastic\Commands;
 
 use Elastic\Elasticsearch\Client;
 use Illuminate\Console\Command;
-use Swis\Elastic\Interfaces\IndexMappingBuilderInterface;
+use Swis\Laravel\Elastic\Interfaces\IndexMappingBuilderInterface;
 
 class ElasticCreateIndex extends Command
 {

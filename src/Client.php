@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Swis\Elastic;
+namespace Swis\Laravel\Elastic;
 
 use Elastic\Elasticsearch\Client as ElasticSearchClient;
 use Elastic\Elasticsearch\Response\Elasticsearch;
 use Illuminate\Support\Collection;
-use Swis\Elastic\Domain\Elastic\SearchResult;
-use Swis\Elastic\Interfaces\SearchResultInterface;
+use Swis\Laravel\Elastic\Domain\Elastic\SearchResult;
+use Swis\Laravel\Elastic\Interfaces\SearchResultInterface;
 
 class Client
 {

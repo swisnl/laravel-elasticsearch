@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Swis\Elastic\Providers;
+namespace Swis\Laravel\Elastic\Providers;
 
 use Elastic\Elasticsearch\Client;
 use Elastic\Elasticsearch\ClientBuilder;

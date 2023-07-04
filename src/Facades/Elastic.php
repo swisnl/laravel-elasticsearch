@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Swis\Elastic\Facades;
+namespace Swis\Laravel\Elastic\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

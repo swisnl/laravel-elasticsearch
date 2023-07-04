@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Swis\Elastic;
+namespace Swis\Laravel\Elastic;
 
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Swis\Elastic\Commands\ElasticCreateIndex;
-use Swis\Elastic\Commands\ElasticDeleteIndex;
-use Swis\Elastic\Commands\ElasticRefreshIndex;
-use Swis\Elastic\Providers\ElasticServiceProvider;
+use Swis\Laravel\Elastic\Commands\ElasticCreateIndex;
+use Swis\Laravel\Elastic\Commands\ElasticDeleteIndex;
+use Swis\Laravel\Elastic\Commands\ElasticRefreshIndex;
+use Swis\Laravel\Elastic\Providers\ElasticServiceProvider;
 
 class LaravelElasticServiceProvider extends PackageServiceProvider
 {
