@@ -10,7 +10,7 @@ use Swis\Laravel\ElasticSearch\Interfaces\IndexableInterface;
 
 class ElasticRefreshIndex extends Command
 {
-    protected $signature = 'elastic:refresh-index';
+    protected $signature = 'elasticsearch:refresh-index';
 
     protected $description = 'Refreshes the index in elastic';
 
@@ -20,7 +20,7 @@ class ElasticRefreshIndex extends Command
         $this->call('elastic:create-index');
 
         /** @var class-string<\Illuminate\Database\Eloquent\Model>[] $models */
-        $models = config('elastic.models');
+        $models = config('elasticsearch.models');
 
         $models = collect($models)
             ->filter(fn (string $model) => is_a($model, IndexableInterface::class, true))

@@ -6,7 +6,7 @@
         "swisnl",
         "laravel-elasticsearch"
     ],
-    "homepage": "https://github.com/swisnl/laravel-elastic",
+    "homepage": "https://github.com/swisnl/laravel-elasticsearch",
     "license": "MIT",
     "authors": [
         {
@@ -36,7 +36,6 @@
         }
     },
     "scripts": {
-        "test": "phpunit",
         "analyse": "vendor/bin/phpstan analyse",
         "check-style": "php-cs-fixer fix --dry-run -v",
         "fix-style": "php-cs-fixer fix"

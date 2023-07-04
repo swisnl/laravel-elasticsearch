@@ -15,7 +15,7 @@ trait SyncsWithIndex
 {
     protected static function bootSyncsWithIndex(): void
     {
-        if (!config('elastic.enabled')) {
+        if (!config('elasticsearch.enabled')) {
             return;
         }
 

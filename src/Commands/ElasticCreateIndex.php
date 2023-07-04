@@ -10,7 +10,7 @@ use Swis\Laravel\ElasticSearch\Interfaces\IndexMappingBuilderInterface;
 
 class ElasticCreateIndex extends Command
 {
-    protected $signature = 'elastic:create-index {--index= : index that needs to be created (index from config is used if option is omitted)}';
+    protected $signature = 'elasticsearch:create-index {--index= : index that needs to be created (index from config is used if option is omitted)}';
 
     protected $description = 'Creates index in elasticsearch';
 
@@ -18,12 +18,12 @@ class ElasticCreateIndex extends Command
     {
         return app()->bound(IndexMappingBuilderInterface::class) ?
             app(IndexMappingBuilderInterface::class)->buildIndexMappingUsing() :
-            config('elastic.index_mapping');
+            config('elasticsearch.index_mapping');
     }
 
     public function handle(Client $client): int
     {
-        $index = $this->option('index') ?? config('elastic.index');
+        $index = $this->option('index') ?? config('elasticsearch.index');
 
         $client->indices()->create([
             'index' => $index,

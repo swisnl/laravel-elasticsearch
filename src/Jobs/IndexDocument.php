@@ -28,7 +28,7 @@ class IndexDocument implements ShouldQueue
         $data = $this->model->getElasticDocument()->toArray();
 
         $client->index([
-            'index' => config('elastic.index'),
+            'index' => config('elasticsearch.index'),
             'id' => $data['id'],
             'body' => $data,
         ]);

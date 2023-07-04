@@ -10,13 +10,13 @@ use Illuminate\Console\Command;
 
 class ElasticDeleteIndex extends Command
 {
-    protected $signature = 'elastic:delete-index {--index= : index that needs to be deleted (index from config is used if option is omitted)}';
+    protected $signature = 'elasticsearch:delete-index {--index= : index that needs to be deleted (index from config is used if option is omitted)}';
 
     protected $description = 'Deletes index in elasticsearch';
 
     public function handle(Client $client): int
     {
-        $index = $this->option('index') ?? config('elastic.index');
+        $index = $this->option('index') ?? config('elasticsearch.index');
 
         try {
             $client->indices()->delete([

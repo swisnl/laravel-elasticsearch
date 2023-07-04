@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Swis\Laravel\ElasticSearch;
 
+use Elastic\Elasticsearch\ClientBuilder;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Swis\Laravel\ElasticSearch\Commands\ElasticCreateIndex;
 use Swis\Laravel\ElasticSearch\Commands\ElasticDeleteIndex;
 use Swis\Laravel\ElasticSearch\Commands\ElasticRefreshIndex;
-use Swis\Laravel\ElasticSearch\Providers\ElasticServiceProvider;
 
 class LaravelElasticServiceProvider extends PackageServiceProvider
 {
@@ -31,8 +31,10 @@ class LaravelElasticServiceProvider extends PackageServiceProvider
             });
     }
 
-    public function bootingPackage(): void
+    public function packageRegistered()
     {
-        $this->app->register(ElasticServiceProvider::class);
+        $this->app->singleton(Client::class, function () {
+            return ClientBuilder::create()->setHosts([config('elasticsearch.host')])->build();
+        });
     }
 }

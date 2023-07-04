@@ -10,6 +10,6 @@ class Elastic extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'laravel-elastic';
+        return 'laravel-elasticsearch';
     }
 }
