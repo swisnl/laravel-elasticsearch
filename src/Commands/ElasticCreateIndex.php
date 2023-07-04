@@ -6,6 +6,7 @@ namespace Swis\Elastic\Commands;
 
 use Elastic\Elasticsearch\Client;
 use Illuminate\Console\Command;
+use Swis\Elastic\Interfaces\IndexMappingBuilderInterface;
 
 class ElasticCreateIndex extends Command
 {
@@ -13,13 +14,20 @@ class ElasticCreateIndex extends Command
 
     protected $description = 'Creates index in elasticsearch';
 
+    public function getConfigBuilderClass(): array
+    {
+        return app()->bound(IndexMappingBuilderInterface::class) ?
+            app(IndexMappingBuilderInterface::class)->buildIndexMappingUsing() :
+            config('elastic.index_mapping');
+    }
+
     public function handle(Client $client): int
     {
         $index = $this->option('index') ?? config('elastic.index');
 
         $client->indices()->create([
             'index' => $index,
-            'body' => config('elastic.index_mapping'),
+            'body' => $this->getConfigBuilderClass(),
         ]);
 
         return Command::SUCCESS;
