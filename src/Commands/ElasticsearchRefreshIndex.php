@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\ElasticSearch\Commands;
+namespace Swis\Laravel\Elasticsearch\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
-use Swis\Laravel\ElasticSearch\Interfaces\IndexableInterface;
+use Swis\Laravel\Elasticsearch\Interfaces\IndexableInterface;
 
-class ElasticRefreshIndex extends Command
+class ElasticsearchRefreshIndex extends Command
 {
     protected $signature = 'elasticsearch:refresh-index';
 

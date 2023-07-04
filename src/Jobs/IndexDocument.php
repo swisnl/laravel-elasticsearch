@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\ElasticSearch\Jobs;
+namespace Swis\Laravel\Elasticsearch\Jobs;
 
 use Elastic\Elasticsearch\Client;
 use Illuminate\Bus\Queueable;
@@ -10,7 +10,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Swis\Laravel\ElasticSearch\Interfaces\IndexableInterface;
+use Swis\Laravel\Elasticsearch\Interfaces\IndexableInterface;
 
 class IndexDocument implements ShouldQueue
 {

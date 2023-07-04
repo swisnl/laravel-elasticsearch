@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\ElasticSearch\Interfaces;
+namespace Swis\Laravel\Elasticsearch\Interfaces;
 
 use Illuminate\Support\Collection;
-use Swis\Laravel\ElasticSearch\Document;
+use Swis\Laravel\Elasticsearch\Document;
 
 interface IndexableInterface
 {

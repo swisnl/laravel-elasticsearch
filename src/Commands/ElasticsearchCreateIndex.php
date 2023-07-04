@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\ElasticSearch\Commands;
+namespace Swis\Laravel\Elasticsearch\Commands;
 
 use Elastic\Elasticsearch\Client;
 use Illuminate\Console\Command;
-use Swis\Laravel\ElasticSearch\Interfaces\IndexMappingBuilderInterface;
+use Swis\Laravel\Elasticsearch\Interfaces\IndexMappingBuilderInterface;
 
-class ElasticCreateIndex extends Command
+class ElasticsearchCreateIndex extends Command
 {
     protected $signature = 'elasticsearch:create-index {--index= : index that needs to be created (index from config is used if option is omitted)}';
 

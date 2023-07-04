@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\ElasticSearch\Facades;
+namespace Swis\Laravel\Elasticsearch\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\ElasticSearch\Interfaces;
+namespace Swis\Laravel\Elasticsearch\Interfaces;
 
 interface SearchResultInterface
 {
-    public static function fromElasticSearchResult(array $values): self;
+    public static function fromElasticsearchResult(array $values): self;
 }

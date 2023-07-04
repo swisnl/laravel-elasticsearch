@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\ElasticSearch;
+namespace Swis\Laravel\Elasticsearch;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Carbon;
-use Swis\Laravel\ElasticSearch\Interfaces\SearchResultInterface;
+use Swis\Laravel\Elasticsearch\Interfaces\SearchResultInterface;
 
 /** @phpstan-ignore-next-line */
 class SearchResult implements Arrayable, SearchResultInterface
@@ -54,7 +54,7 @@ class SearchResult implements Arrayable, SearchResultInterface
     /**
      * @param array<string, mixed> $values
      */
-    public static function fromElasticSearchResult(array $values): self
+    public static function fromElasticsearchResult(array $values): self
     {
         return (new self())
             ->setId($values['_source']['id'])

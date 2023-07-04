@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\ElasticSearch\Concerns;
+namespace Swis\Laravel\Elasticsearch\Concerns;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
-use Swis\Laravel\ElasticSearch\Interfaces\DocumentInterface;
-use Swis\Laravel\ElasticSearch\Interfaces\IndexableInterface;
-use Swis\Laravel\ElasticSearch\Jobs\DeleteDocument;
-use Swis\Laravel\ElasticSearch\Jobs\IndexDocument;
+use Swis\Laravel\Elasticsearch\Interfaces\DocumentInterface;
+use Swis\Laravel\Elasticsearch\Interfaces\IndexableInterface;
+use Swis\Laravel\Elasticsearch\Jobs\DeleteDocument;
+use Swis\Laravel\Elasticsearch\Jobs\IndexDocument;
 
 trait SyncsWithIndex
 {

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\ElasticSearch;
+namespace Swis\Laravel\Elasticsearch;
 
 use Elastic\Elasticsearch\ClientBuilder;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Swis\Laravel\ElasticSearch\Commands\ElasticCreateIndex;
-use Swis\Laravel\ElasticSearch\Commands\ElasticDeleteIndex;
-use Swis\Laravel\ElasticSearch\Commands\ElasticRefreshIndex;
+use Swis\Laravel\Elasticsearch\Commands\ElasticsearchCreateIndex;
+use Swis\Laravel\Elasticsearch\Commands\ElasticsearchDeleteIndex;
+use Swis\Laravel\Elasticsearch\Commands\ElasticsearchRefreshIndex;
 
 class LaravelElasticServiceProvider extends PackageServiceProvider
 {
@@ -20,9 +20,9 @@ class LaravelElasticServiceProvider extends PackageServiceProvider
             ->name('swis-laravel-elasticsearch')
             ->hasConfigFile('elasticsearch')
             ->hasCommands([
-                ElasticRefreshIndex::class,
-                ElasticCreateIndex::class,
-                ElasticDeleteIndex::class,
+                ElasticsearchRefreshIndex::class,
+                ElasticsearchCreateIndex::class,
+                ElasticsearchDeleteIndex::class,
             ])
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command

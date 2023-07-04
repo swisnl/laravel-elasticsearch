@@ -32,7 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Swis\\Laravel\\ElasticSearch\\": "src"
+            "Swis\\Laravel\\Elasticsearch\\": "src"
         }
     },
     "scripts": {
@@ -46,10 +46,10 @@
         },
         "laravel": {
             "providers": [
-                "Swis\\Laravel\\ElasticSearch\\LaravelElasticServiceProvider"
+                "Swis\\Laravel\\Elasticsearch\\LaravelElasticServiceProvider"
             ],
             "aliases": {
-                "SwisElastic": "Swis\\Laravel\\ElasticSearch\\Facades\\Elastic"
+                "SwisElastic": "Swis\\Laravel\\Elasticsearch\\Facades\\Elastic"
             }
         }
     },

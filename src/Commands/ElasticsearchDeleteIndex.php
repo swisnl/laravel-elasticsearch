@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\ElasticSearch\Commands;
+namespace Swis\Laravel\Elasticsearch\Commands;
 
 use Elastic\Elasticsearch\Client;
 use Elastic\Elasticsearch\Exception\ClientResponseException;
 use Illuminate\Console\Command;
 
-class ElasticDeleteIndex extends Command
+class ElasticsearchDeleteIndex extends Command
 {
     protected $signature = 'elasticsearch:delete-index {--index= : index that needs to be deleted (index from config is used if option is omitted)}';
 

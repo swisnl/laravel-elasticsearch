@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\ElasticSearch;
+namespace Swis\Laravel\Elasticsearch;
 
-use Elastic\Elasticsearch\Client as ElasticSearchClient;
+use Elastic\Elasticsearch\Client as ElasticsearchClient;
 use Elastic\Elasticsearch\Response\Elasticsearch;
 use Illuminate\Support\Collection;
-use Swis\Laravel\ElasticSearch\Interfaces\SearchResultInterface;
+use Swis\Laravel\Elasticsearch\Interfaces\SearchResultInterface;
 
 class Client
 {
-    public function __construct(private readonly ElasticSearchClient $elasticSearchClient)
+    public function __construct(private readonly ElasticsearchClient $elasticSearchClient)
     {
     }
 
@@ -37,12 +37,12 @@ class Client
         if (!app()->bound(SearchResultInterface::class)) {
             /* @phpstan-ignore-next-line */
             return $hits->map(
-                static fn (array $document): SearchResult => SearchResult::fromElasticSearchResult($document)
+                static fn (array $document): SearchResult => SearchResult::fromElasticsearchResult($document)
             );
         }
 
         return $hits->map(
-            static fn (array $document): SearchResultInterface => app(SearchResultInterface::class)::fromElasticSearchResult($document)
+            static fn (array $document): SearchResultInterface => app(SearchResultInterface::class)::fromElasticsearchResult($document)
         );
     }
 }
