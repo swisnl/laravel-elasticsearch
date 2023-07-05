@@ -7,7 +7,7 @@ namespace Swis\Laravel\Elasticsearch;
 use Elastic\Elasticsearch\Client as ElasticsearchClient;
 use Elastic\Elasticsearch\Response\Elasticsearch;
 use Illuminate\Support\Collection;
-use Swis\Laravel\Elasticsearch\Interfaces\SearchResultInterface;
+use Swis\Laravel\Elasticsearch\Contracts\SearchResultInterface;
 
 class Client
 {

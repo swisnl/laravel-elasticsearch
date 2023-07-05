@@ -6,8 +6,8 @@ namespace Swis\Laravel\Elasticsearch\Concerns;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
-use Swis\Laravel\Elasticsearch\Interfaces\DocumentInterface;
-use Swis\Laravel\Elasticsearch\Interfaces\IndexableInterface;
+use Swis\Laravel\Elasticsearch\Contracts\DocumentInterface;
+use Swis\Laravel\Elasticsearch\Contracts\IndexableInterface;
 use Swis\Laravel\Elasticsearch\Jobs\DeleteDocument;
 use Swis\Laravel\Elasticsearch\Jobs\IndexDocument;
 

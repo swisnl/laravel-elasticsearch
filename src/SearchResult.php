@@ -6,7 +6,7 @@ namespace Swis\Laravel\Elasticsearch;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Carbon;
-use Swis\Laravel\Elasticsearch\Interfaces\SearchResultInterface;
+use Swis\Laravel\Elasticsearch\Contracts\SearchResultInterface;
 
 /** @phpstan-ignore-next-line */
 class SearchResult implements Arrayable, SearchResultInterface

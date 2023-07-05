@@ -6,7 +6,7 @@ namespace Swis\Laravel\Elasticsearch\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
-use Swis\Laravel\Elasticsearch\Interfaces\IndexableInterface;
+use Swis\Laravel\Elasticsearch\Contracts\IndexableInterface;
 
 class ElasticsearchRefreshIndex extends Command
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\Elasticsearch\Interfaces;
+namespace Swis\Laravel\Elasticsearch\Contracts;
 
 use Illuminate\Support\Collection;
 use Swis\Laravel\Elasticsearch\Document;

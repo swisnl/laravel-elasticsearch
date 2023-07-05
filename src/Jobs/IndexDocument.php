@@ -10,7 +10,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Swis\Laravel\Elasticsearch\Interfaces\IndexableInterface;
+use Swis\Laravel\Elasticsearch\Contracts\IndexableInterface;
 
 class IndexDocument implements ShouldQueue
 {

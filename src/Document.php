@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Swis\Laravel\Elasticsearch;
 
 use Illuminate\Support\Carbon;
-use Swis\Laravel\Elasticsearch\Interfaces\DocumentInterface;
+use Swis\Laravel\Elasticsearch\Contracts\DocumentInterface;
 
 class Document implements DocumentInterface
 {

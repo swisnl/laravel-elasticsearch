@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'host' => env('ELASTIC_HOST', 'localhost:9200'),
-    'index' => env('ELASTIC_INDEX', 'index'),
-    'enabled' => env('ELASTIC_ENABLED', false),
+    'host' => env('ELASTICSEARCH_HOST', 'localhost:9200'),
+    'index' => env('ELASTICSEARCH_INDEX', 'index'),
+    'enabled' => env('ELASTICSEARCH_ENABLED', false),
     'models' => [
         // define your model classes here that needs to be indexed
     ],

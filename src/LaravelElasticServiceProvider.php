@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Swis\Laravel\Elasticsearch;
 
+use Elastic\Elasticsearch\Client;
 use Elastic\Elasticsearch\ClientBuilder;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;

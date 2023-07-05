@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Swis\Laravel\Elasticsearch\Interfaces;
+namespace Swis\Laravel\Elasticsearch\Contracts;
 
 interface SearchResultInterface
 {
