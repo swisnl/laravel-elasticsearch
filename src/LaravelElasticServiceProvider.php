@@ -35,7 +35,14 @@ class LaravelElasticServiceProvider extends PackageServiceProvider
     public function packageRegistered(): void
     {
         $this->app->singleton(Client::class, function () {
-            return ClientBuilder::create()->setHosts([config('elasticsearch.host')])->build();
+            $builder = ClientBuilder::create()
+                ->setHosts([config('elasticsearch.host')]);
+
+            if (config('elasticsearch.username') && config('elasticsearch.password')) {
+                $builder->setBasicAuthentication(config('elasticsearch.username'), config('elasticsearch.password'));
+            }
+
+            return $builder->build();
         });
     }
 }

@@ -2,6 +2,8 @@
 
 return [
     'host' => env('ELASTICSEARCH_HOST', 'localhost:9200'),
+    'username' => env('ELASTICSEARCH_USERNAME'),
+    'password' => env('ELASTICSEARCH_PASSWORD'),
     'index' => env('ELASTICSEARCH_INDEX', 'index'),
     'enabled' => env('ELASTICSEARCH_ENABLED', false),
     'models' => [
