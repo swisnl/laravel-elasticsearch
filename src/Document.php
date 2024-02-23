@@ -13,21 +13,21 @@ class Document implements DocumentInterface
     protected string $type;
     protected Carbon $date;
 
-    public function setId(string $id): self
+    public function setId(string $id): static
     {
         $this->id = $id;
 
         return $this;
     }
 
-    public function setType(string $type): self
+    public function setType(string $type): static
     {
         $this->type = $type;
 
         return $this;
     }
 
-    public function setDate(Carbon $date): self
+    public function setDate(Carbon $date): static
     {
         $this->date = $date;
 

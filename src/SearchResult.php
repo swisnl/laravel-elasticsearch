@@ -20,7 +20,7 @@ class SearchResult implements Arrayable, SearchResultInterface
         return $this->id;
     }
 
-    public function setId(string $id): self
+    public function setId(string $id): static
     {
         $this->id = $id;
 
@@ -32,14 +32,14 @@ class SearchResult implements Arrayable, SearchResultInterface
         return $this->type;
     }
 
-    public function setType(string $type): self
+    public function setType(string $type): static
     {
         $this->type = $type;
 
         return $this;
     }
 
-    public function setDate(Carbon $date): SearchResult
+    public function setDate(Carbon $date): static
     {
         $this->date = $date;
 

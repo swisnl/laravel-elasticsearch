@@ -8,11 +8,11 @@ use Illuminate\Support\Carbon;
 
 interface DocumentInterface
 {
-    public function setId(string $id): self;
+    public function setId(string $id): static;
 
-    public function setType(string $type): self;
+    public function setType(string $type): static;
 
-    public function setDate(Carbon $date): self;
+    public function setDate(Carbon $date): static;
 
     /**
      * @return array<array-key, mixed>
