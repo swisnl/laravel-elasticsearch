@@ -12,7 +12,9 @@ use Swis\Laravel\Elasticsearch\Contracts\SearchResultInterface;
 class SearchResult implements Arrayable, SearchResultInterface
 {
     protected string $id;
+
     protected string $type;
+
     protected Carbon $date;
 
     public function getId(): string
@@ -52,7 +54,7 @@ class SearchResult implements Arrayable, SearchResultInterface
     }
 
     /**
-     * @param array<string, mixed> $values
+     * @param  array<string, mixed>  $values
      */
     public static function fromElasticsearchResult(array $values): self
     {

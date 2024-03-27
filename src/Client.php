@@ -16,7 +16,7 @@ class Client
     }
 
     /**
-     * @param array<string,mixed> $query
+     * @param  array<string,mixed>  $query
      */
     public function search(array $query): Elasticsearch
     {
@@ -24,8 +24,6 @@ class Client
     }
 
     /**
-     * @param Elasticsearch $searchResultsResponse
-     *
      * @return Collection<array-key, SearchResult|SearchResultInterface>
      */
     public function createCollectionResponse(Elasticsearch $searchResultsResponse): Collection
@@ -34,7 +32,7 @@ class Client
 
         $hits = new Collection($searchResults['hits']['hits']);
 
-        if (!app()->bound(SearchResultInterface::class)) {
+        if (! app()->bound(SearchResultInterface::class)) {
             /* @phpstan-ignore-next-line */
             return $hits->map(
                 static fn (array $document): SearchResult => SearchResult::fromElasticsearchResult($document)

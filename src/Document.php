@@ -10,7 +10,9 @@ use Swis\Laravel\Elasticsearch\Contracts\DocumentInterface;
 class Document implements DocumentInterface
 {
     protected string $id;
+
     protected string $type;
+
     protected Carbon $date;
 
     public function setId(string $id): static
