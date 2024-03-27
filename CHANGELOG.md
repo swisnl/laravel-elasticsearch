@@ -24,6 +24,12 @@ Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) princi
 ### Security
 - Nothing
 
+## 0.4.0 - 2024-03-27
+
+### Added
+
+- Added support for Laravel 11
+
 ## 0.3.0 - 2024-02-23
 
 ### Changed
