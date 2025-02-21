@@ -11,9 +11,7 @@ use Swis\Laravel\Elasticsearch\Contracts\SearchResultInterface;
 
 class Client
 {
-    public function __construct(private readonly ElasticsearchClient $elasticSearchClient)
-    {
-    }
+    public function __construct(private readonly ElasticsearchClient $elasticSearchClient) {}
 
     /**
      * @param  array<string,mixed>  $query

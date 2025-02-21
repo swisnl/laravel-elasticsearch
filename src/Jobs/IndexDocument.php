@@ -19,9 +19,7 @@ class IndexDocument implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public function __construct(protected IndexableInterface $model)
-    {
-    }
+    public function __construct(protected IndexableInterface $model) {}
 
     public function handle(Client $client): void
     {

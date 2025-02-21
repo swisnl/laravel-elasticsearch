@@ -54,6 +54,6 @@ trait SyncsWithIndex
 
     public function relatedModelsToIndex(): Collection
     {
-        return new Collection();
+        return new Collection;
     }
 }

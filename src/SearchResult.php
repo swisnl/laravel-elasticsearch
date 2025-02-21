@@ -58,7 +58,7 @@ class SearchResult implements Arrayable, SearchResultInterface
      */
     public static function fromElasticsearchResult(array $values): self
     {
-        return (new self())
+        return (new self)
             ->setId($values['_source']['id'])
             ->setType($values['_source']['type'])
             ->setDate(Carbon::parse($values['_source']['date']));
