@@ -32,6 +32,6 @@ class ElasticsearchCreateIndex extends Command
 
         $this->info(sprintf('Index "%s" created', $index));
 
-        return Command::SUCCESS;
+        return self::SUCCESS;
     }
 }

@@ -30,6 +30,6 @@ class ElasticsearchDeleteIndex extends Command
 
         $this->info(sprintf('Index "%s" deleted', $index));
 
-        return Command::SUCCESS;
+        return self::SUCCESS;
     }
 }

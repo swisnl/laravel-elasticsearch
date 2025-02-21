@@ -29,6 +29,6 @@ class ElasticsearchRefreshIndex extends Command
 
         $this->info(sprintf('Dispatched %d index jobs', $models->count()));
 
-        return Command::SUCCESS;
+        return self::SUCCESS;
     }
 }
