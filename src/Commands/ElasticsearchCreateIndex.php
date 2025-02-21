@@ -14,6 +14,9 @@ class ElasticsearchCreateIndex extends Command
 
     protected $description = 'Creates index in elasticsearch';
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getIndexMapping(): array
     {
         return app()->bound(IndexMappingBuilderInterface::class) ?

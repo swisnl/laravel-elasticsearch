@@ -6,5 +6,8 @@ namespace Swis\Laravel\Elasticsearch\Contracts;
 
 interface IndexMappingBuilderInterface
 {
+    /**
+     * @return array<string, mixed>
+     */
     public function indexMapping(): array;
 }
