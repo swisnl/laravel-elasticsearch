@@ -16,8 +16,8 @@ class ElasticsearchRefreshIndex extends Command
 
     public function handle(): int
     {
-        $this->call('elastic:delete-index');
-        $this->call('elastic:create-index');
+        $this->call(ElasticsearchDeleteIndex::class);
+        $this->call(ElasticsearchCreateIndex::class);
 
         /** @var class-string<\Illuminate\Database\Eloquent\Model>[] $models */
         $models = config('elasticsearch.models');
