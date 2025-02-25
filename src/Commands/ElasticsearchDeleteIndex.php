@@ -16,6 +16,7 @@ class ElasticsearchDeleteIndex extends Command
 
     public function handle(Client $client): int
     {
+        /** @var string $index */
         $index = $this->option('index') ?? config('elasticsearch.index');
 
         try {

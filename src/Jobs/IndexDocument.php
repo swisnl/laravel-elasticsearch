@@ -23,10 +23,12 @@ class IndexDocument implements ShouldQueue
 
     public function handle(Client $client): void
     {
+        /** @var string $index */
+        $index = config('elasticsearch.index');
         $data = $this->model->getElasticDocument()->toArray();
 
         $client->index([
-            'index' => config('elasticsearch.index'),
+            'index' => $index,
             'id' => $data['id'],
             'body' => $data,
         ]);

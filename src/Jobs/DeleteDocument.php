@@ -28,9 +28,12 @@ class DeleteDocument implements ShouldQueue
 
     public function handle(Client $client): void
     {
+        /** @var string $index */
+        $index = config('elasticsearch.index');
+
         try {
             $client->delete([
-                'index' => config('elasticsearch.index'),
+                'index' => $index,
                 'id' => $this->id,
             ]);
         } catch (ClientResponseException $exception) {
