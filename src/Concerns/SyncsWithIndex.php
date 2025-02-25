@@ -11,6 +11,7 @@ use Swis\Laravel\Elasticsearch\Contracts\IndexableInterface;
 use Swis\Laravel\Elasticsearch\Jobs\DeleteDocument;
 use Swis\Laravel\Elasticsearch\Jobs\IndexDocument;
 
+/** @phpstan-ignore trait.unused */
 trait SyncsWithIndex
 {
     protected static function bootSyncsWithIndex(): void
