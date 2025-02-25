@@ -1,0 +1,25 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Parameter \#1 \$params of method Elastic\\Elasticsearch\\Endpoints\\Indices\:\:create\(\) expects array\{index\: string, wait_for_active_shards\: string, timeout\: Elastic\\Elasticsearch\\Endpoints\\time, master_timeout\: Elastic\\Elasticsearch\\Endpoints\\time, pretty\: bool, human\: bool, error_trace\: bool, source\: string, \.\.\.\}, array\{index\: string, body\: array\<string, mixed\>\} given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Commands/ElasticsearchCreateIndex.php
+
+		-
+			message: '#^Parameter \#1 \$params of method Elastic\\Elasticsearch\\Endpoints\\Indices\:\:delete\(\) expects array\{index\: list, timeout\: Elastic\\Elasticsearch\\Endpoints\\time, master_timeout\: Elastic\\Elasticsearch\\Endpoints\\time, ignore_unavailable\: bool, allow_no_indices\: bool, expand_wildcards\: Elastic\\Elasticsearch\\Endpoints\\enum, pretty\: bool, human\: bool, \.\.\.\}, array\{index\: string\} given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Commands/ElasticsearchDeleteIndex.php
+
+		-
+			message: '#^Parameter \#1 \$params of method Elastic\\Elasticsearch\\Client\:\:delete\(\) expects array\{id\: string, index\: string, wait_for_active_shards\: string, refresh\: Elastic\\Elasticsearch\\Traits\\enum, routing\: string, timeout\: Elastic\\Elasticsearch\\Traits\\time, if_seq_no\: float\|int, if_primary_term\: float\|int, \.\.\.\}, array\{index\: string, id\: int\|string\} given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Jobs/DeleteDocument.php
+
+		-
+			message: '#^Parameter \#1 \$params of method Elastic\\Elasticsearch\\Client\:\:index\(\) expects array\{id\: string, index\: string, wait_for_active_shards\: string, op_type\: Elastic\\Elasticsearch\\Traits\\enum, refresh\: Elastic\\Elasticsearch\\Traits\\enum, routing\: string, timeout\: Elastic\\Elasticsearch\\Traits\\time, version\: float\|int, \.\.\.\}, array\{index\: string, id\: mixed, body\: array\<string, mixed\>\} given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Jobs/IndexDocument.php
