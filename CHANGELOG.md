@@ -24,6 +24,16 @@ Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) princi
 ### Security
 - Nothing
 
+## 0.6.0 - 2026-02-17
+
+### Added
+
+- You can specify the job classes in the config. This allows you to use your own custom job classes, for example if you want to use a different queue connection or queue name, add middleware, etc.
+
+### Changed
+
+- The `\Swis\Laravel\Elasticsearch\Contracts\IndexableInterface` contract now includes an `unindex()` method. This method is included in the default `\Swis\Laravel\Elasticsearch\Concerns\SyncsWithIndex` concern, so you don't need to implement it yourself.
+
 ## 0.5.0 - 2025-02-25
 
 ### Added
