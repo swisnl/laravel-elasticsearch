@@ -24,6 +24,12 @@ Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) princi
 ### Security
 - Nothing
 
+## 0.6.1 - 2026-02-17
+
+### Fixed
+
+- Changed visibility `\Swis\Laravel\Elasticsearch\Jobs\DeleteDocument::$id` to protected to allow extending the job class.
+
 ## 0.6.0 - 2026-02-17
 
 ### Added
