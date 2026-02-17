@@ -19,4 +19,6 @@ interface IndexableInterface
     public function relatedModelsToIndex(): Collection;
 
     public function index(): void;
+
+    public function unindex(): void;
 }

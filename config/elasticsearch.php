@@ -28,6 +28,15 @@ return [
     ],
 
     /*
+     * Here you can override the class names of the jobs used by this package. Make sure
+     * your custom jobs extend the ones provided by the package.
+     */
+    'jobs' => [
+        'index_document' => Swis\Laravel\Elasticsearch\Jobs\IndexDocument::class,
+        'delete_document' => Swis\Laravel\Elasticsearch\Jobs\DeleteDocument::class,
+    ],
+
+    /*
      * Here you can define the fields that need to be searched with additional boosting.
      */
     'search_fields' => [

@@ -22,7 +22,7 @@ class ElasticsearchRefreshIndex extends Command
         $this->call(ElasticsearchDeleteIndex::class);
         $this->call(ElasticsearchCreateIndex::class);
 
-        /** @var class-string<IndexableModel>[] $models */
+        /** @var class-string[] $models */
         $models = config('elasticsearch.models');
 
         $models = collect($models)
