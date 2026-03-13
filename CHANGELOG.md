@@ -24,6 +24,12 @@ Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) princi
 ### Security
 - Nothing
 
+## 0.8.0 - 2026-03-13
+
+### Added
+
+- Added support for Laravel 13
+
 ## 0.7.0 - 2026-03-13
 
 ### Changed
