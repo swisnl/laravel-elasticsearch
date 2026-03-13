@@ -24,6 +24,12 @@ Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) princi
 ### Security
 - Nothing
 
+## 0.7.0 - 2026-03-13
+
+### Changed
+
+- The `\Swis\Laravel\Elasticsearch\Jobs\DeleteDocument` job now has tags. Job arguments have changed, please review your custom jobs for compatibility.
+
 ## 0.6.1 - 2026-02-17
 
 ### Fixed
