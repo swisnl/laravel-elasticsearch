@@ -10,9 +10,9 @@ use Swis\Laravel\Elasticsearch\Contracts\DocumentInterface;
 use Swis\Laravel\Elasticsearch\Contracts\IndexableInterface;
 
 /**
- * @phpstan-require-extends \Illuminate\Database\Eloquent\Model
+ * @phpstan-require-extends Model
  *
- * @phpstan-require-implements \Swis\Laravel\Elasticsearch\Contracts\IndexableInterface
+ * @phpstan-require-implements IndexableInterface
  *
  * @phpstan-ignore trait.unused
  */

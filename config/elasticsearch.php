@@ -1,5 +1,8 @@
 <?php
 
+use Swis\Laravel\Elasticsearch\Jobs\DeleteDocument;
+use Swis\Laravel\Elasticsearch\Jobs\IndexDocument;
+
 return [
     /*
      * The host and credentials of your Elasticsearch server.
@@ -32,8 +35,8 @@ return [
      * your custom jobs extend the ones provided by the package.
      */
     'jobs' => [
-        'index_document' => Swis\Laravel\Elasticsearch\Jobs\IndexDocument::class,
-        'delete_document' => Swis\Laravel\Elasticsearch\Jobs\DeleteDocument::class,
+        'index_document' => IndexDocument::class,
+        'delete_document' => DeleteDocument::class,
     ],
 
     /*
