@@ -61,7 +61,7 @@ trait SyncsWithIndex
     public function unindex(): void
     {
         $jobClass = config('elasticsearch.jobs.delete_document');
-        dispatch(new $jobClass($this->getKey()));
+        dispatch(new $jobClass($this->getKey(), get_class($this)));
     }
 
     public function relatedModelsToIndex(): Collection

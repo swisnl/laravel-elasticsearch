@@ -19,7 +19,15 @@ class DeleteDocument implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public function __construct(protected int|string $id) {}
+    public function __construct(protected int|string $id, protected string $class) {}
+
+    /**
+     * @return array<int, string>
+     */
+    public function tags(): array
+    {
+        return [$this->class.':'.$this->id];
+    }
 
     public function handle(Client $client): void
     {
